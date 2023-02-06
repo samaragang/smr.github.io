@@ -1,0 +1,183 @@
+.header {
+    position: relative;
+    height: 100vh;
+}
+
+.header__title {
+    max-width: 467px;
+
+    font-size: 200px;
+    font-weight: 800;
+    
+    line-height: 156px;
+
+    opacity: 0.07;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    @include breakpoint($desktop-bp) {
+        font-size: 130px;
+        line-height: 108px;
+        top: 20px;
+        left: 60px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        display: none;
+    }
+    
+}
+
+.header__arrows {
+    position: absolute;
+    left: 210px;
+    bottom: 30px;
+    z-index: 3;
+
+    @include breakpoint($desktop-bp) {
+        left: 130px;
+    }
+    @include breakpoint($tablet-bp) {
+        display: none;
+    }
+}
+
+.header__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    overflow: hidden;
+
+    @include breakpoint($laptop-bp) {
+        svg {
+            width: 500px;
+            height: 290px;
+            
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        svg {
+            transform: translateX(78px);
+        }
+    }
+}
+
+.line-animation {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    animation: animdash 5s infinite 6s;
+}
+
+@keyframes animdash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.header__aside {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    text-align: center;
+
+    border-right: 1px solid rgba(#fff, .25);
+
+    @include breakpoint($laptop-bp) {
+        height: 100%;
+    }
+
+    @include breakpoint($tablet-bp) {
+        min-height: 320px;
+        border: none;
+        height: 40vh;
+        background-color: rgba(rgb(190, 190, 190), .25);
+    }
+
+    @include breakpoint($mobile-bp) {
+        background-color: transparent;
+    }
+}
+
+.logo {
+    @include breakpoint($desktop-bp) {
+        img {
+            width: 100px;
+        }
+    }  
+}
+
+.header__search {
+    padding-top: 5px;
+    padding-bottom: 35px;
+
+    @include breakpoint($desktop-bp) {
+        padding-bottom: 8px;
+    }
+}
+
+.header__date {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 64px;
+    
+    span {
+        display: block;
+        padding-top: 10px;
+        margin-bottom: 30px;
+
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1.4px;
+
+        @include breakpoint($desktop-bp) {
+            margin-bottom: 5px;
+            padding-top: 0;
+            font-size: 14px;
+        }
+    }
+
+    @include breakpoint($desktop-bp) {
+        font-size: 60px;
+    }
+}
+
+.header__location {
+    margin-bottom: 45px;
+    padding-left: 19px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.05px;
+    font-weight: 300;
+    position: relative;
+    
+    text-transform: capitalize;
+
+    &::before {
+        content: "";
+        width: 11px;
+        height: 13px;
+        background-image: url('../images/marker.svg');
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    @include breakpoint($desktop-bp) {
+        margin-bottom: 30px;
+    }
+}
+

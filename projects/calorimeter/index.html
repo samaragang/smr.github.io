@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            transition: .25s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            font-size: 20px;
+
+        }
+
+        table {
+            width: 900px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+
+        }
+
+        table th {
+            font-weight: normal;
+            font-size: 15px;
+            color: #ffffff;
+            background-color: #354251;
+        }
+
+        table td {
+            font-size: 18px;
+            color: #354251;
+        }
+
+        table td,
+        table th {
+            white-space: pre-wrap;
+            padding: 10px 5px;
+            line-height: 13px;
+            vertical-align: middle;
+            border: 1px solid #354251;
+        }
+
+        table tr:hover {
+            background-color: #f9fafb
+        }
+
+        table tr:hover td {
+            color: #354251;
+            cursor: default;
+        }
+
+        /* input type number */
+
+
+        .btn {
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0 25px;
+            /* margin: 0 15px 15px 0; */
+            outline: none;
+            border: 1px solid whitesmoke;
+            border-radius: 6px;
+            height: 33px;
+            /* line-height: 46px; */
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #444;
+            background-color: whitesmoke;
+            box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+            cursor: pointer;
+            user-select: none;
+            appearance: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            transition: box-shadow 0.2s;
+        }
+
+        .btn:focus-visible {
+            border: 1px solid whitesmoke;
+            outline: none;
+        }
+
+        .btn:hover {
+            transition: all 0.2s;
+            box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+        }
+
+        .btn:active {
+            background-color: #808080;
+            color: white;
+        }
+
+        .btn:disabled {
+            background-color: #eee;
+            border-color: #eee;
+            color: #444;
+            cursor: not-allowed;
+        }
+
+        .input-number {
+            display: flex;
+            align-items: center;
+            background: whitesmoke;
+            border: 1px solid #E5E8EE;
+            box-sizing: border-box;
+            border-radius: 6px;
+            color: #424348;
+            font-size: 14px;
+            text-align: center;
+            width: calc(33px * 3);
+            box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+        }
+
+        .input-number__input {
+            background: white;
+            width: 32px;
+            height: 32px;
+            border: none;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .input-number__minus,
+        .input-number__plus {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* /input type number */
+
+        .select {
+            width: 150px;
+            height: 33px;
+            background: whitesmoke;
+            border: 1px solid #E5E8EE;
+            box-sizing: border-box;
+            border-radius: 6px;
+            color: #424348;
+            font-size: 20px;
+            text-align: center;
+            /* width: calc(33px * 3); */
+            box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+            cursor: pointer;
+        }
+
+        .form {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .wrapper {
+            width: 900px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .second_table {
+            margin-top: 30px;
+        }
+
+        .end {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+    </style>
+
+    <div class="title">
+        <img src="logo.png">
+    </div>
+    <div class="wrapper">
+        <form class="form" action="">
+            <select required id="select" name="select" class="select">
+                <option value="бутерброд">бутерброд</option>
+                <option value="гречка">гречка</option>
+                <option value="салат">салат</option>
+                <option value="шаурма">шаурма</option>
+                <option value="пирог">пирог</option>
+                <option value="макароны">макароны</option>
+            </select>
+            <input type="hidden">
+            <div class="input-number">
+                <div class="input-number__minus">-</div>
+                <input id="number" class="input-number__input" type="text" pattern="^[0-9]+$" value="1">
+                <div class="input-number__plus">+</div>
+            </div>
+            <input type="hidden">
+            <input class="btn" onclick="formTable('.wrapper')" type="submit" value="Добавить" />
+        </form>
+        <table id="mainTab">
+            <tbody>
+                <th>Наименование блюда</th>
+                <th>калорийность блюда, ккал</th>
+                <th>количество, шт.</th>
+                <th>суммарная калорийность, ккал</th>
+            </tbody>
+            <tfoot>
+                <td colspan="3">ИТОГО:</td>
+                <td id="total">0</td>
+            </tfoot>
+        </table>
+        <div class="end">
+            <button class="btn" onclick="total()">Посчитать</button>
+            <button class="btn" onclick="unique()">Очистить</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        function formTable(selector) {
+            var wrapper = document.querySelector(selector);
+            var form = wrapper.getElementsByTagName("form")[0];
+            var table = wrapper.getElementsByTagName("table")[0];
+            let select = document.getElementById("select").value;
+            let number = Number(document.getElementById("number").value);
+            let rows = table.rows.length - 1;
+            let k = 0;
+    
+            form.onsubmit = function (ev) {
+                ev = ev || event;
+                ev.preventDefault();
+                let tr = document.createElement("tr"), td;
+                tr.setAttribute("id", "delete");
+                let table = document.getElementById("mainTab");  
+
+                switch (select) {
+                    case "бутерброд":
+                        num = 1000;
+                        break;
+                    case "гречка":
+                        num = 2000;
+                        break;
+                    case "салат":
+                        num = 3000;
+                        break;
+                    case "шаурма":
+                        num = 4000;
+                        break;
+                    case "пирог":
+                        num = 5000;
+                        break;
+                    case "макароны":
+                        num = 6000;
+                        break;
+                }
+                
+                for (let i = 1; i < rows; i++) {
+                    let row = table.rows[i];
+                    let cel = row.cells[0].innerHTML;  
+
+                    if (cel == select) {
+                        k = i;
+                    }
+                }
+   
+                if (k != 0) {
+                    row = table.rows[k];
+                    let num_t = Number(row.cells[2].innerHTML);
+                    row.cells[2].innerHTML = num_t + number;
+                    let all_num = row.cells[2].innerHTML;                
+                    row.cells[3].innerHTML = all_num * num;
+                    k = 0;            
+                } else {
+            
+                    for (let i = 0; i < 4; i++) {
+                        td = document.createElement("td");
+                        td.innerHTML = this.elements[i].value;
+                
+                        if (i == 1) {
+                            td.innerHTML = num;
+                        }
+                    
+                        if (i == 3) {
+                            td.innerHTML = num * this.elements[2].value;
+                        }
+                        tr.appendChild(td);
+                    }
+                    table.appendChild(tr);
+                }
+
+                
+            }
+        }
+
+        function total() {
+            let sum = 0;
+            var table = document.getElementById("mainTab");
+            let rows = table.rows.length - 1;
+
+            for (let i = 1; i < rows; i++) {
+                let row = table.rows[i];
+                let cel = row.cells[3];
+                sum += Number(cel.innerText);
+            }
+            document.getElementById("total").innerHTML = sum;
+        }
+        
+        function unique() {
+            let table = document.getElementById("mainTab");
+            let rows = table.rows.length - 1;
+
+            for (let i = 1; i < rows; i++) {
+                document.getElementById("delete").remove();
+                document.getElementById("total").innerHTML = 0;
+            }
+        }
+
+        jQuery(($) => {
+
+            // Уменьшаем на 1
+            $(document).on("click", ".input-number__minus", function () {
+                let total = $(this).next();
+                if (total.val() > 1) {
+                    total.val(+total.val() - 1);
+                }
+            });
+
+            // Увеличиваем на 1
+            $(document).on("click", ".input-number__plus", function () {
+                let total = $(this).prev();
+                total.val(+total.val() + 1);
+            });
+
+            // Запрещаем ввод текста 
+            document.querySelectorAll('.input-number__input').forEach(function (el) {
+                el.addEventListener('keydown', function (event) {
+                    // Разрешаем: backspace, delete, tab
+                    if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 ||
+                        // Ctrl+A
+                        (event.keyCode == 65 && event.ctrlKey === true) ||
+                        // ← →
+                        (event.keyCode >= 35 && event.keyCode <= 39)) {
+                        return;
+                    } else {
+                        // Только цифры
+                        if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                            event.preventDefault();
+                        }
+                    }
+
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

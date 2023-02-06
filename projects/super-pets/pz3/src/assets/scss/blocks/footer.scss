@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 157px;
+    background-color: #864000;
+    font-size: 18px;
+    line-height: 20px;   
+    
+    color: #FFFFFF;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(1, 40px);
+    gap: 65px;
+    justify-content: center;
+    margin-top: 60px;
+
+    .social__item:hover {
+        path {
+            fill: #FF9432;
+        }
+        
+    }
+}
+
+.copyright {
+    margin-bottom: 16px;
+}

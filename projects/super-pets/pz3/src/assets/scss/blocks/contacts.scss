@@ -1,0 +1,24 @@
+.contacts__inner {
+    display: flex;
+}
+.contacts__left {
+    width: 852px;
+}
+.contacts__right {
+    padding: 106px 48px 50px 51px;
+    width: 588px;
+    background-color: $orange;
+    font-size: 36px;
+    line-height: 40px;
+    
+    color: #FFFFFF;
+}
+
+.map {
+    width: 852px;
+    height: 852px;
+}
+
+.contacts__item {
+    margin-bottom: 84px;
+}

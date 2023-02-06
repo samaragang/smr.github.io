@@ -1,0 +1,197 @@
+.holder {
+    background-image: url(../images/travel-bg.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    .title {
+        span {
+            @include breakpoint($tablet-bp) {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &.sleep {
+        background-image: url(../images/sleep-bg.png);
+        background-position: right 85%;
+    }
+
+    .slider-arrows {
+        top: 250px;
+        opacity: .25;
+    }
+    @include breakpoint($mobile-bp) {
+        padding-bottom: 100px;
+        background-size: 120px;
+    }
+}
+
+.holder-slider {
+
+    &__head {
+        background-repeat: no-repeat;
+        background-position: top left;
+        min-height: 780px;
+
+        @include breakpoint($forholder-bp) {
+            min-height: 720px;
+        }
+    }
+
+    &__descr {
+        margin-top: -442px;
+        padding: 320px 0 0 132px;
+        min-height: 320px;
+        background-repeat: no-repeat;
+        background-position: right 150px;
+
+        .descr__head {
+            // width: 420px;
+            
+            // display: flex;
+            position: relative;
+            // justify-content: space-around;
+
+            // padding-right: 68px;
+
+    
+            .avia-logo {
+                position: absolute;
+                right: -80px;
+                top: -8px;
+            }
+    
+            span {
+                font-weight: 100;
+            }
+
+            .holder__star-list {
+                position: absolute;
+                right: -195px;
+                top: -9px;
+                li {
+                    display: inline-block;
+                    margin-left: -25px;
+                }
+                img {
+                    position: static;
+                }
+                @include breakpoint($forholder-bp) {
+                    margin-left: 12px;
+                    position: static;
+                }
+            }
+            @include breakpoint($mobile-bp) {
+                font-size: 32px;
+            }
+        }
+        @include breakpoint($tablet-bp) {
+            padding: 160px 0 0 20px;
+            // background-position: right -119px;
+            background-size: 500px;
+        }
+        @include breakpoint($mobile-bp) {
+            background-image: none !important;
+        }
+        
+    }
+
+    &__subtitle {
+        text-align: right;
+        padding-right: 80px;
+        padding-top: 132px;
+        @include breakpoint($forholder-bp) {
+            padding: 100px 80px 0 0;
+        }
+        @include breakpoint($mobile-bp) {
+            padding: 100px 20px 0 0;
+        }
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}
+
+
+
+.holder-slider__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 132px 0;
+    @include breakpoint($tablet-bp) {
+        display: block;
+        padding: 0;
+    }
+}
+
+.holder-slider__info-item {
+    margin-bottom: 66px;
+    min-height: 200px;
+    position: relative;
+
+    @include breakpoint($tablet-bp) {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        min-height: auto;
+    }
+}
+
+.holder-slider__info-subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    white-space: nowrap;
+
+    opacity: 0.5;
+
+    letter-spacing: 8px;
+    transform: rotate(-90deg);
+    text-align: right;
+
+    position: absolute;
+    top: 97px;
+    left: -97px;
+    width: 200px;
+    height: 0;
+    @include breakpoint($tablet-bp) {
+        width: auto;
+        height: auto;
+        position: static;
+        transform: rotate(0);
+        text-align-last: left;
+    }
+
+}
+
+.holder-slider__info-title {
+    font-weight: 800;
+    font-size: 40px;
+    padding-left: 40px;
+    position: relative;
+
+    .holder-pricing__span {
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.75;
+        letter-spacing: 5.25px;
+        position: absolute;
+        bottom: -18px;
+        right: 0;
+        @include breakpoint($mobile-bp) {
+            left: 0;
+            
+        }
+    }
+    @include breakpoint($tablet-bp) {
+        padding-left: 0;
+    }
+}
+
+.sleep {
+    .holder-slider__descr {
+        @include breakpoint($tablet-bp) {
+            background-position: right 10px;
+        }
+    }
+}
+

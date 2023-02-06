@@ -1,0 +1,32 @@
+.services {
+    // padding: 100px 0;
+    // background-color: #fff;
+}
+
+.services__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 40px 100px;
+}
+
+.services__item {
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.services__name {
+    font-size: 24px;
+    line-height: 27px;
+
+}
+
+.video {
+    width: 1236px;
+    height: 697px;
+}

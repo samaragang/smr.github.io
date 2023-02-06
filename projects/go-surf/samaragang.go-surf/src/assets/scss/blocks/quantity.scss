@@ -1,0 +1,70 @@
+.quantity {
+    display: inline-block;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+  
+  .quantity input {
+    width: 30px;
+    height: 42px;
+    display: block;
+
+    background-color: transparent;
+    border: none;
+
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #fff;
+  }
+  
+  .quantity input:focus {
+    outline: 0;
+  }
+  
+  .quantity-nav {
+    float: left;
+    position: static;
+    height: 42px;
+  }
+  
+  .quantity-button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 45px;
+    cursor: pointer;
+    @include breakpoint($tablet-bp) {
+      margin-top: 8px;
+    }
+  }
+  
+  .quantity-button.quantity-up {
+    position: absolute;
+    right: 0;
+    @include breakpoint($tablet-bp) {
+      right: auto;
+      left: 25px;
+    }
+  }
+  
+  .quantity-button.quantity-down {
+    position: absolute;
+    right: 25px;
+    @include breakpoint($tablet-bp) {
+      right: auto;
+    }
+  }

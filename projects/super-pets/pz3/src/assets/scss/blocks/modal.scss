@@ -1,0 +1,88 @@
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(#865B52, .4) ;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    &.show {
+        display: flex;
+    }
+
+}
+
+.modal__dialog {
+    display: inline-block;
+    width: 795px;
+    height: 768px;
+
+    padding: 25px 25px 33px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='50' ry='50' stroke='%23FF9432FF' stroke-width='3' stroke-dasharray='12' stroke-dashoffset='14' stroke-linecap='square'/%3e%3c/svg%3e");
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 0 13px #fff;
+
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-title {
+    font-size: 36px;
+    line-height: 40px;
+    color: $orange;
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+.modal__dialog-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    margin-bottom: 14px;
+}
+
+.modal__item {
+    width: 745px;
+    height: 85px;
+    background: #FFF9F3;
+    border: 3px solid #FF9432;
+    border-radius: 45px;
+    padding-left: 39px;
+    font-family: 'Comfortaa';
+    margin-bottom: 20px;
+   
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 33px;
+    color: black;
+
+    &--textarea {
+        resize: none; 
+        height: 172px;
+    }
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.close {
+    position: absolute;
+    top: 38px;
+    right: 38px;
+    cursor: pointer;
+}

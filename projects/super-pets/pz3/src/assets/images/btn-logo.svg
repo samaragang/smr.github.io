@@ -1,0 +1,15 @@
+<svg width="65" height="61" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+ <g>
+  <title>Layer 1</title>
+  <ellipse cx="8.45507" cy="-2.35351" id="svg_5" fill="white" transform="matrix(-0.837531 -0.54639 -0.54639 0.837531 66.2513 17.7609)" ry="5.21685" rx="3.29485"/>
+  <ellipse cx="7.83432" cy="-5.62125" id="svg_7" fill="white" transform="matrix(-0.986743 -0.162292 -0.162292 0.986743 51.4243 12.2697)" ry="5.21685" rx="3.29485"/>
+  <g id="svg_8">
+   <circle transform="rotate(44.8403 41.9442 29.4257)" id="svg_1" fill="white" r="14.6819" cy="29.42568" cx="41.94419"/>
+   <rect transform="rotate(44.8403 31.566 19.1025)" id="svg_2" fill="white" height="29.3639" width="29.3639" y="19.10248" x="31.56599"/>
+   <circle transform="rotate(-91.4219 21.1808 29.3938)" id="svg_3" fill="white" r="14.6819" cy="29.39378" cx="21.18079"/>
+   <ellipse transform="rotate(-33.1197 4.11789 11.7382)" id="svg_4" fill="white" ry="5.21685" rx="3.29485" cy="11.73818" cx="4.11789"/>
+   <ellipse transform="rotate(-9.33993 18.945 6.24698)" id="svg_6" fill="white" ry="5.21685" rx="3.29485" cy="6.24698" cx="18.94499"/>
+  </g>
+ </g>
+</svg>

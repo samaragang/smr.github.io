@@ -1,0 +1,117 @@
+
+@import "../../../node_modules/slick-carousel/slick/slick";
+@import "../../../node_modules/animate.css/animate";
+@import "vars";
+@import "mixins";
+@import "vender/reset";
+@import "vender/fonts";
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background:#d9e4ea;
+
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 700;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+input {
+    font-family: 'Comfortaa';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+
+.bg {
+    background-color: #fff;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box
+}
+
+button {
+    border: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: $orange;
+    }
+ 
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 28px;
+    font-size: 48px;
+    line-height: 54px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 58px;
+        height: 3px;
+        background-color: $orange;
+        margin: 0 28px;
+        border-radius: 44px;
+    }
+}
+
+
+#toTop {
+    padding:5px;
+
+    position:fixed;
+    bottom:-20px;
+    right:10px;
+    cursor:pointer;
+    display:none;
+    z-index: 100;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Blocks */ 
+
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/container.scss";
+@import "blocks/intro.scss";
+@import "blocks/btn.scss";
+@import "blocks/services.scss";
+@import "blocks/questions.scss";
+@import "blocks/staff.scss";
+@import "blocks/appointment.scss";
+@import "blocks/contacts.scss";
+@import "blocks/modal.scss";
+
+
+@import "media";
