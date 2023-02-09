@@ -1,12 +1,13 @@
 body {
     font-family: 'Lucida Console', monospace;
+    font-size: 25px;
 }
 a {
     color: #000;
 
 }
 .container {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
 }
 
