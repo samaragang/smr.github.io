@@ -1,0 +1,32 @@
+.header__inner {
+    height: 154px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+}
+
+.navbar__item:hover {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: $green-light;
+
+    }
+}

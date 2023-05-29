@@ -1,0 +1,35 @@
+.assortment__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.assortment__item {
+    width: 335px;
+    height: 623px;
+    background-color: $gray-light;
+    padding: 21px 25px 41px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.assortment__photo {
+    border-radius: 20px;
+    margin-bottom: 32px;
+}
+
+.assortment__name {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.assortment__price {
+    font-size: 48px;
+    line-height: 59px;
+    color: $green-light;
+    text-align: center;
+    margin-bottom: 29px;
+}

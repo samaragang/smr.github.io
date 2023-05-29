@@ -1,0 +1,19 @@
+.about__inner {
+    display: flex;
+    gap: 113px;
+}
+
+.about__item {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 225px;
+    text-align: center;
+    justify-items: center;
+    align-items : center;
+}
+
+.about__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}

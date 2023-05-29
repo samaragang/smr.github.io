@@ -1,0 +1,38 @@
+.delivery__inner {
+    display: flex;
+    gap: 130px;
+}
+
+.delivery__item {
+    display: grid;
+    grid-template-rows: 205px 46px 142px;
+    grid-template-columns: 320px;
+    text-align: center;
+    // align-items: center;
+
+    &:nth-child(2) {
+        .delivery__img {
+            justify-content: center;
+        }
+    }
+}
+
+.delivery__img {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.delivery__text {
+    font-size: 38px;
+    line-height: 46px;
+    color: $green-dark;
+}
+
+.delivery__description {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}

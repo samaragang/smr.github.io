@@ -1,0 +1,32 @@
+.footer {
+    background-color: $green-dark;
+}
+
+.footer__inner {
+    max-width: 1440px;
+    height: 127px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0;
+}
+
+.navbar__footer,
+.footer__tel {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    img {
+        margin-right: 10px;
+    }
+    a{
+        color: white;
+    }
+   
+}
+.footer__tel{
+    display: flex;
+    align-items: center;
+}
+

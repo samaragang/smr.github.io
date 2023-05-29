@@ -1,0 +1,248 @@
+.orders {
+    padding: 0 90px;
+}
+
+.form__inner {
+    background-color: white;
+    width: 100%;
+    height: 2247px;
+}
+
+
+.form-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-info__item {
+    width: 1058px;
+    height: 35px;
+    color: black;
+    border: none;
+    margin-bottom: 93px;
+    border-bottom: 2px solid black;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+
+.form__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 35px;
+}
+
+.form-setting,
+.form-flowers,
+.form-addition,
+.form-delivery {
+    display: grid;
+    grid-template-columns: 490px 600px;
+    grid-template-rows: 43px;
+    margin-bottom: 58px;
+    align-items: center;
+}
+
+.form-flowers {
+    grid-template-rows: repeat(3, 43px);
+}
+
+
+.form__item {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 20px;
+}
+
+.tera {
+    display: flex;
+    align-items: center;
+
+    #text {
+        margin-bottom: -5px;
+    }
+}
+
+.form__appointment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 53px);
+    margin-bottom: 151px;
+}
+
+.form-time__select {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 349px;
+
+    &:focus {
+        border: 1px solid $gray;
+    }
+}
+
+.select__item {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+
+}
+
+.form-btn {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-grid;
+    grid-template-columns: 269px 286px;
+    grid-template-rows: 96px;
+    gap: 88px;
+    justify-content: center;
+    margin-left: -34px;
+}
+
+
+.radio {
+    display: none;
+
+    &:checked+.fake-radio::before {
+        opacity: 1;
+    }
+}
+
+.fake-radio {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 32px;
+    transform: translateY(2px);
+    position: relative;
+    margin-right: 28px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .2s linear;
+    }
+}
+
+.input-text {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 469px;
+    height: 53px;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    color: rgba(#000000, .5);
+    padding-left: 12px;
+
+    &:focus {
+        border: 1px solid #FF9432;
+    }
+}
+
+.checkbox {
+    display: none;
+
+    &:checked+.fake-checkbox::before {
+        opacity: 1;
+    }
+}
+
+.fake-checkbox {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    transform: translateY(2px);
+    position: relative;
+    margin-right: 28px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: url(../images/accept.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .2s linear;
+    }
+}
+
+.form-date {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.textarea {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.form-note {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 21px;
+    margin-bottom: 90px;
+}
+
+.total-price {
+    width: 599px;
+    height: 116px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+
+    color: $green-light;
+
+    span {
+        font-size: 72px;
+        line-height: 88px;
+    }
+    margin-bottom: 55px;
+}

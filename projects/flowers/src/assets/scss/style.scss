@@ -1,0 +1,76 @@
+@import "../../../node_modules/slick-carousel/slick/slick";
+@import "../../../node_modules/animate.css/animate";
+@import "vender/reset";
+@import "vars";
+
+body {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: black;
+    background-color: white;
+}
+
+.center {
+    background-color: white;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1440px;
+
+    padding: 0 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 55px;
+}
+section {
+    margin-bottom: 90px;
+}
+
+#toTop {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green-light;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+        margin-top: -10px;
+    }
+
+
+    position:fixed;
+    bottom:20px;
+    left:10px;
+    cursor:pointer;
+    z-index: 100;
+}
+
+
+
+@import "blocks/header.scss";
+@import "blocks/intro.scss";
+@import "blocks/buttons.scss";
+@import "blocks/about.scss";
+@import "blocks/assortment.scss";
+@import "blocks/delivery.scss";
+@import "blocks/reviews.scss";
+@import "blocks/form.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";
